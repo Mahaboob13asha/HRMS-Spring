@@ -8,6 +8,7 @@ public class hrmsProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(hrmsProjectApplication.class, args);
+		
 	}
 
 }
