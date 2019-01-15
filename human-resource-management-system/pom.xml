@@ -9,6 +9,7 @@
 	</parent>
 	<groupId>com.hrms</groupId>
 	<artifactId>hrms_Project</artifactId>
+	 <packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hrms_Project</name>
 	<description>My Human Resource Management System (HRMS) Template </description>
@@ -17,6 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<arifactId.proName>hrms</arifactId.proName>
 	</properties>
 
 	<dependencies>
@@ -120,7 +122,11 @@
 			<artifactId>webjars-locator</artifactId>
 			 <version>0.34</version>
 		</dependency>
-			
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 			
 	</dependencies>
 
@@ -131,6 +137,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		 <finalName>${arifactId.proName}</finalName>
 	</build>
 
 </project>
