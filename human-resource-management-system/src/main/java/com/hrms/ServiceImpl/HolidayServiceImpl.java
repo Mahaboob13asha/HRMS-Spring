@@ -1,7 +1,6 @@
 package com.hrms.ServiceImpl;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,12 +28,12 @@ public class HolidayServiceImpl implements HolidayService{
 		
 	}
 
-	public Optional<Holiday> findById(long id) {
-		return holidayRepository.findById(id);
+	public Holiday findById(long id) {
+		return holidayRepository.findOne(id);
 	}
 
 	public void deleteById(long id){
 		
-		 holidayRepository.deleteById(id);
+		 holidayRepository.delete(id);
 	}
 }

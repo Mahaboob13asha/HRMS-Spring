@@ -1,10 +1,9 @@
 package com.hrms.respository;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
+import com.hrms.model.Employee;
 
-
-public interface HrmsRepository extends CrudRepository<com.hrms.model.Employee, Long> {
+public interface HrmsRepository extends CrudRepository<Employee, Long> {
 
 }

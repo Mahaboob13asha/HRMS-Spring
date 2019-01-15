@@ -172,6 +172,9 @@
 									<li><a href="#"> Document Management </a></li>
 								</ul>
 							</li>
+							<li> 
+								<a th:href="@{/Departments/ListOfDepartments}"><i class="la la-book"></i> <span>Departments</span></a>
+							</li>
 							<li class="submenu">
 								<a href="#"  ><i class="la la-user"></i> <span>Manage Attendance</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -308,7 +311,7 @@
 											<th>#</th>
 											<th>Title </th>
 											<th>Holiday Date</th>
-											<th>Day</th>
+											<!-- <th>Day</th> -->
 											<th class="text-right">Action</th>
 										</tr>
 									</thead>
@@ -317,12 +320,12 @@
 											<td th:text="${holiday.holiday_id}"></td>
 											<td th:text="${holiday.title}"></td>
 											<td th:text="${holiday.holidayDate}"></td>
-											<td th:text="${holiday.title}"></td>
+											<!-- <td th:text="${holiday.title}"></td> -->
 											<td class="text-right">
 												<div class="dropdown">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 													<ul class="dropdown-menu pull-right">
-														<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a th:href="@{/holidays/editHoliday/(id=${holiday.holiday_id})}" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
 														<li><a th:href="@{/holidays/deleteHoliday/(id=${holiday.holiday_id})}"  title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
 													</ul>
 												</div>

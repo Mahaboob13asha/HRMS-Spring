@@ -1,6 +1,5 @@
 package com.hrms.ServiceImpl;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,13 +26,13 @@ public class HrmsImpl implements Hrms {
 	}
 
 	public void delete(Long id) {
-		hrmsRepository.deleteById(id);
+		hrmsRepository.delete(id);
 		
 	}
 	
-	public Optional<Employee> findOne(Long id)
+	public Employee findOne(Long id)
 	{
-		return hrmsRepository.findById(id);
+		return hrmsRepository.findOne(id);
 	}
 
 }

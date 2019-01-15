@@ -172,6 +172,9 @@
 									<li><a href="#"> Document Management </a></li>
 								</ul>
 							</li>
+							<li> 
+								<a th:href="@{/Departments/ListOfDepartments}"><i class="la la-book"></i> <span>Departments</span></a>
+							</li>
 							<li class="submenu">
 								<a href="#"  ><i class="la la-user"></i> <span>Manage Attendance</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -326,12 +329,12 @@
                            <div class="col-sm-3 col-xs-6"> 
 								<div class="form-group form-focus select-focus">
 									<label class="control-label">Designation</label>
-									<select class="select floating"> 
+									<select id="designation" name="designation" class="select floating"> 
 										<option value="">Select Designation</option>
-										<option value="">Web Developer</option>
-										<option value="1">Web Designer</option>
-										<option value="1">Android Developer</option>
-										<option value="1">Ios Developer</option>
+										<option value="Web Developer">Web Developer</option>
+										<option value="Web Designer">Web Designer</option>
+										<option value="Android Developer">Android Developer</option>
+										<option value="Ios Developer">Ios Developer</option>
 									</select>
 								</div>
                            </div>
@@ -811,19 +814,21 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="control-label">Company</label>
-											<select class="select" name="company">
-												<option value="">Global Technologies</option>
-												<option value="1">Delta Infotech</option>
+											<select   class="select" id="company" name="company">
+											<option value="" selected="selected" disabled="disabled">Please select an option...</option>
+												<option value="Global Technologies">Global Technologies</option>
+												<option value="Delta Infotech">Delta Infotech</option>
 											</select>
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="control-label">Designation</label>
-											<select class="select" name="designation">
-												<option>Web Developer</option>
-												<option>Web Designer</option>
-												<option>SEO Analyst</option>
+											<select class="select" id="designation" name="designation">
+											<option value="" selected="selected" disabled="disabled">Please select an option...</option>
+												<option value="Web Developer">Web Developer</option>
+												<option value="Web Designer">Web Designer</option>
+												<option value="SEO Analyst">SEO Analyst</option>
 											</select>
 										</div>
 									</div>

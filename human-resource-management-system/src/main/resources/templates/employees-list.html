@@ -174,6 +174,9 @@
 									<li><a href="#"> Document Management </a></li>
 								</ul>
 							</li>
+							<li> 
+								<a th:href="@{/Departments/ListOfDepartments}"><i class="la la-book"></i> <span>Departments</span></a>
+							</li>
 							<li class="submenu">
 								<a href="#"  ><i class="la la-user"></i> <span>Manage Attendance</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -345,7 +348,7 @@
 								<table class="table table-striped custom-table datatable">
 									<thead>
 										<tr>
-											<th style="width:30%;">Name</th>
+											<th style="width: 130px;">Name</th>
 											<th>Employee ID</th>
 											<th>Email</th>
 											<th>Mobile</th>
@@ -364,8 +367,8 @@
 											<td th:text="${employee.Email}"></td>
 											<td  th:text="${employee.phone}"></td>
 											<td th:text="${employee.JoiningDate}"></td>
-											<td>
-												<div class="dropdown">
+											<td  th:text="${employee.designation}">
+												<!-- <div class="dropdown">
 													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Web Developer <i class="caret"></i></a>
 													<ul class="dropdown-menu">
 														<li><a href="#">Software Engineer</a></li>
@@ -373,14 +376,14 @@
 														<li><a href="#">Frontend Developer</a></li>
 														<li><a href="#">UI/UX Developer</a></li>
 													</ul>
-												</div>
+												</div> -->
 											</td>
 										<!-- 	<td th:text="@{/deleteEmp(id=${emp.emp_id})}"></td> -->
 											 <td class="text-right">
 												<div class="dropdown">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 													<ul class="dropdown-menu pull-right">
-														<li><a href="#"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a th:href="@{/employee/edit-employee(id=${employee.pid})}"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
 													 <li><a th:href="@{/employee/deleteEmp(id=${employee.pid})}">Delete</a></li>
 														<!-- <li><a href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li> -->
 														<!-- <a th:href="@{/product/updateProduct(id=${product.product_id})}"> -->

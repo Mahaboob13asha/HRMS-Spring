@@ -273,7 +273,7 @@ public class HomeController {
 	@RequestMapping("/invoice-reports")
 	public String invoicereports(){
 		
-		return "invoice-reports.";
+		return "invoice-reports";
 	}
 	
 	@RequestMapping("/settings")
@@ -411,13 +411,13 @@ public class HomeController {
 		return "add-contact";
 	}
 
-/*	@RequestMapping("/departments.html")
-	public String departments(){
-		
-		return "departments";
+	@RequestMapping("/ticket-view")
+	public String ticketview(){
+		return "ticket-view";
 	}
+
 	
-	
+/*	
 	@RequestMapping("/designations.html")
 	public String designations(){
 		

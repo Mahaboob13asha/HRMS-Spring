@@ -1,7 +1,6 @@
 package com.hrms.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -25,6 +24,7 @@ import com.hrms.model.Employee;
 @RequestMapping("/employee")
 public class HrmsController {
 
+	
 	@Autowired
 	private HrmsImpl hrmsService;
 	
@@ -80,21 +80,22 @@ public class HrmsController {
 	}*/
 	
 	
-	@RequestMapping("/EditEmployee")
-	public String UpdateEmployeeinfo(Long id,Model model) {
+	@RequestMapping("/edit-employee")
+	public String UpdateEmployeeinfo(@RequestParam("id") Long id, Model model) {
+		Employee employee = hrmsService.findOne(id);
+		model.addAttribute("employee", employee);
 		
-		Optional<Employee> employee1 = hrmsService.findOne(id);
-		model.addAttribute("employee", employee1);
-		return "EditEmployee";
+		return "edit-employee";
 
 	}
 	
 	@RequestMapping(value= "/updateEmployeeDetails",method=RequestMethod.POST)
-	public String UpdateEmployeeDetails(@ModelAttribute("employee") Employee employee, HttpServletRequest request){
-				
+	public String UpdateEmployeeDetails( @ModelAttribute("employee") Employee employee,  HttpServletRequest request){
+				 System.out.println("################## " + employee);
 		hrmsService.addEmployee(employee);
-		return "EditEmployee";
+		
+		return "redirect:/employee/showAllEmployee";
 	}
-	
+	 
 	
 }

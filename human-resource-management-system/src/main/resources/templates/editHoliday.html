@@ -171,6 +171,9 @@
 									<li><a href="#"> Document Management </a></li>
 								</ul>
 							</li>
+							<li> 
+								<a th:href="@{/Departments/ListOfDepartments}"><i class="la la-book"></i> <span>Departments</span></a>
+							</li>
 							<li class="submenu">
 								<a href="#"  ><i class="la la-user"></i> <span>Manage Attendance</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -516,45 +519,32 @@
 				</div>
 				
 				
-				<div id="edit_holiday"  role="dialog">
+				<div id="edit_holiday" class="custom-modal" role="dialog">
 				<div class="modal-dialog">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<a th:href="@{/holidays/OpenHolidayList}" ><button type="button" class="close" data-dismiss="modal">&times;</button></a>
 					<div class="modal-content modal-md">
 						<div class="modal-header">
 							<h4 class="modal-title">Edit Holiday</h4>
 						</div>
 						<div class="modal-body">
-							<form th:action="@{/holidays/updateHoliday}" method="post" enctype="multipart/form-data">>
-							
-									<input hidden="hidden" name="holiday_idd" th:value="${holiday.holiday_id}" />
-									
-							<!-- title -->
-						<div class="form-group">
-							<label class="col-md-2 control-label" for="title">* Title</label>
-	
-							<div class="col-md-8">
-								<input type="text" name="title" class="form-control" id="title"
-									th:value="${holiday.title}" required="required" placeholder="Title" />
-								<span class="help-block">Title of the book</span>
-							</div>
-						</div>
-						
-										<!-- title -->
-						<div class="form-group">
-							<label class="col-md-2 control-label" for="title">* Title</label>
-	
-							<div class="col-md-8">
-								<input type="text" name="title" class="form-control" id="title"
-									th:value="${holiday.holidayDate}" required="required" placeholder="Title" />
-								<span class="help-block">Title of the book</span>
-							</div>
-						</div>
-						
+							<form th:action="@{/holidays/updateHoliday(id=@{holiday.holiday_id})}" method="post">
+							<input hidden="hidden" name="holiday_id" th:value="${holiday.holiday_id}" />
+								<div class="form-group">
+									<label>Holiday Name <span class="text-danger">*</span></label>
+									<input class="form-control" value="New Year" required="required" th:value="${holiday.title}" type="text"  name="title">
+								</div>
+								<div class="form-group">
+									<label>Holiday Date <span class="text-danger">*</span></label>
+									<div class="cal-icon"><input class="form-control datetimepicker" value="01-01-2017" required="required" type="text" th:value="${holiday.holidayDate}" name="holidayDate"></div>
+								</div>
+								<div class="m-t-20 text-center">
+									<button class="btn btn-primary">Edit Holiday</button>
+								</div>
 							</form>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> 
 			
 			
 			</div>
