@@ -5,13 +5,13 @@
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{/assets/img/favicon.png}">
         <title>Invoice - Human Resource Management System (HRMS) admin template</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/line-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/assets/css/font-awesome.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/assets/css/line-awesome.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}">
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
@@ -21,18 +21,18 @@
         <div class="main-wrapper">
             <div class="header">
                 <div class="header-left">
-                    <a href="/" class="logo logo-big">
+                    <a th:href="@{/}" class="logo logo-big">
 						<img src="assets/img/logo.png" width="40" height="40" alt="">
 					</a>
-					<a href="/" class="logo logo-small">
+					<a th:href="@{/}" class="logo logo-small">
 						<img src="assets/img/logo.png" width="30" height="30" alt="">
 					</a>
                 </div>
-				<a id="toggle_btn" href="javascript:void(0);"><i class="la la-bars"></i></a>
+				<a id="toggle_btn" href="/javascript:void(0);"><i class="la la-bars"></i></a>
                 <div class="page-title-box pull-left">
 					<h3>Human Resource Management System (HRMS)</h3>
                 </div>
-				<a id="mobile_btn" class="mobile_btn pull-left" href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
+				<a id="mobile_btn" class="mobile_btn pull-left" th:href="@{#sidebar}"><i class="fa fa-bars" aria-hidden="true"></i></a>
 				<ul class="nav navbar-nav navbar-right user-menu pull-right">
 					<li class="dropdown hidden-xs">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o"></i> <span class="badge bg-purple pull-right">3</span></a>
@@ -43,7 +43,7 @@
 							<div class="drop-scroll">
 								<ul class="media-list">
 									<li class="media notification-message">
-										<a href="/activities">
+										<a th:href="@{/activities}">
 											<div class="media-left">
 												<span class="avatar">
 													<img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
@@ -56,7 +56,7 @@
 										</a>
 									</li>
 									<li class="media notification-message">
-										<a href="/activities">
+										<a th:href="@{/activities}">
 											<div class="media-left">
 												<span class="avatar">V</span>
 											</div>
@@ -67,7 +67,7 @@
 										</a>
 									</li>
 									<li class="media notification-message">
-										<a href="/activities">
+										<a th:href="@{/activities}">
 											<div class="media-left">
 												<span class="avatar">L</span>
 											</div>
@@ -78,7 +78,7 @@
 										</a>
 									</li>
 									<li class="media notification-message">
-										<a href="/activities">
+										<a th:href="@{/activities}">
 											<div class="media-left">
 												<span class="avatar">G</span>
 											</div>
@@ -89,7 +89,7 @@
 										</a>
 									</li>
 									<li class="media notification-message">
-										<a href="/activities">
+										<a th:href="@{/activities}">
 											<div class="media-left">
 												<span class="avatar">V</span>
 											</div>
@@ -102,35 +102,35 @@
 								</ul>
 							</div>
 							<div class="topnav-dropdown-footer">
-								<a href="/activities">View all Notifications</a>
+								<a th:href="@{/activities}">View all Notifications</a>
 							</div>
 						</div>
 					</li>
 					<li class="dropdown hidden-xs">
-						<a href="javascript:;" id="open_msg_box" class="hasnotifications"><i class="fa fa-comment-o"></i> <span class="badge bg-purple pull-right">8</span></a>
+						<a th:href="@{/javascript:;}" id="open_msg_box" class="hasnotifications"><i class="fa fa-comment-o"></i> <span class="badge bg-purple pull-right">8</span></a>
 					</li>	
 					<li class="dropdown">
-						<a href="/profile" class="dropdown-toggle user-link" data-toggle="dropdown" title="Admin">
+						<a th:href="@{/profile}" class="dropdown-toggle user-link" data-toggle="dropdown" title="Admin">
 							<span class="user-img"><img class="img-circle" src="assets/img/user.jpg" width="40" alt="Admin">
 							<span class="status online"></span></span>
 							<span>Admin</span>
 							<i class="caret"></i>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="/profile">My Profile</a></li>
-							<li><a href="/edit-profile">Edit Profile</a></li>
-							<li><a href="/settings">Settings</a></li>
-							<li><a href="/login">Logout</a></li>
+							<li><a th:href="@{/profile}">My Profile</a></li>
+							<li><a th:href="@{/edit-profile}">Edit Profile</a></li>
+							<li><a th:href="@{/settings}">Settings</a></li>
+							<li><a th:href="@{/login}">Logout</a></li>
 						</ul>
 					</li>
 				</ul>
 				<div class="dropdown mobile-user-menu pull-right">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="/profile">My Profile</a></li>
-						<li><a href="/edit-profile">Edit Profile</a></li>
-						<li><a href="/settings">Settings</a></li>
-						<li><a href="/login">Logout</a></li>
+						<li><a th:href="@{/profile}">My Profile</a></li>
+						<li><a th:href="@{/edit-profile}">Edit Profile</a></li>
+						<li><a th:href="@{/settings}">Settings</a></li>
+						<li><a th:href="@{/login}">Logout</a></li>
 					</ul>
 				</div>
             </div>
@@ -139,15 +139,15 @@
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li> 
-								<a href="/"><i class="la la-dashboard"></i> <span>Dashboard</span></a>
+								<a th:href="@{/}"><i class="la la-dashboard"></i> <span>Dashboard</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#" class="noti-dot"><i class="la la-user"></i> <span> Employees</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="/employee/showAllEmployee">All Employees</a></li>
-									<li><a href="/holidays/OpenHolidayList">Holidays</a></li>
-									<li><a href="/leaves">Leave Requests <span class="badge bg-primary pull-right">1</span></a></li>
-									<li><a href="/attendance">Attendance</a></li>
+									<li><a th:href="@{/employee/showAllEmployee}">All Employees</a></li>
+									<li><a th:href="@{/holidays/OpenHolidayList}">Holidays</a></li>
+									<li><a th:href="@{/leaves}">Leave Requests <span class="badge bg-primary pull-right">1</span></a></li>
+									<li><a th:href="@{/attendance}">Attendance</a></li>
 									<!-- <li><a href="/departments">Departments</a></li> -->
 									 <!-- <li><a href="/designations">Designations</a></li> -->
 								</ul>
@@ -162,13 +162,13 @@
 								</ul>
 							</li>
 							<!-- <li> 
-								<a href="/projects"><i class="la la-rocket"></i> <span>Projects</span></a>
+								<a th:href="@{/projects}"><i class="la la-rocket"></i> <span>Projects</span></a>
 							</li> -->
 							<li class="submenu">
 								<a href="#"><i class="la la-money"></i> <span> Employee Masters </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="/salary"> Employee Salary </a></li>
-									<li><a href="/salary-view"> Payslip </a></li>
+									<li><a th:href="@{/salary}"> Employee Salary </a></li>
+									<li><a th:href="@{/salary-view}"> Payslip </a></li>
 									<li><a href="#"> Document Management </a></li>
 								</ul>
 							</li>
@@ -193,104 +193,104 @@
 							<li class="submenu">
 								<a href="#"><i class="la la-phone"></i> <span> Calls</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="/voice-call">Voice Call</a></li>
-									<li><a href="/video-call">Video Call</a></li>
-									<li><a href="/incoming-call">Incoming Call</a></li>
+									<li><a th:href="@{/voice-call}">Voice Call</a></li>
+									<li><a th:href="@{/video-call}">Video Call</a></li>
+									<li><a th:href="@{/incoming-call}">Incoming Call</a></li>
 								</ul>
 							</li>
 							<li> 
-								<a href="/contacts"><i class="la la-book"></i> <span>Contacts</span></a>
+								<a th:href="@{/contacts}"><i class="la la-book"></i> <span>Contacts</span></a>
 							</li>
 							<li> 
-								<a href="/leads"><i class="la la-user-secret"></i> <span>Leads</span></a>
+								<a th:href="@{/leads}"><i class="la la-user-secret"></i> <span>Leads</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-files-o"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="/estimates">Estimates</a></li>
-									<li><a class="active" href="/invoices">Invoices</a></li>
-									<li><a href="/payments">Payments</a></li>
-									<li><a href="/expenses">Expenses</a></li>
-									<li><a href="/provident-fund">Provident Fund</a></li>
-									<li><a href="/taxes">Taxes</a></li>
+									<li><a th:href="@{/estimates}">Estimates</a></li>
+									<li><a class="active" th:href="@{/invoices}">Invoices</a></li>
+									<li><a th:href="@{/payments}">Payments</a></li>
+									<li><a th:href="@{/expenses}">Expenses</a></li>
+									<li><a th:href="@{/provident-fund}">Provident Fund</a></li>
+									<li><a th:href="@{/taxes}">Taxes</a></li>
 								</ul>
 							</li>
 							<!-- <li class="submenu">
 								<a href="#"><i class="la la-money"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="/salary"> Employee Salary </a></li>
-									<li><a href="/salary-view"> Payslip </a></li>
+									<li><a th:href="@{/salary}"> Employee Salary </a></li>
+									<li><a th:href="@{/salary-view}"> Payslip </a></li>
 								</ul>
 							</li> -->
 							<li> 
-								<a href="/worksheet"><i class="la la-clock-o"></i> <span>Timing Sheet</span></a>
+								<a th:href="@{/worksheet}"><i class="la la-clock-o"></i> <span>Timing Sheet</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-building"></i> <span> Jobs </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="/jobs"> Manage Jobs </a></li>
-									<li><a href="/job-applicants"> Applied Candidates </a></li>
+									<li><a th:href="@{/jobs}"> Manage Jobs </a></li>
+									<li><a th:href="@{/job-applicants}"> Applied Candidates </a></li>
 								</ul>
 							</li>
 							<li> 
-								<a href="/tickets"><i class="la la-ticket"></i> <span>Tickets</span></a>
+								<a th:href="@{/tickets}"><i class="la la-ticket"></i> <span>Tickets</span></a>
 							</li>
 							<li> 
-								<a href="/events"><i class="la la-calendar"></i> <span>Events</span></a>
+								<a th:href="@{/events}"><i class="la la-calendar"></i> <span>Events</span></a>
 							</li>
 							<li> 
-								<a href="/inbox"><i class="la la-at"></i> <span>Email</span></a>
+								<a th:href="@{/inbox}"><i class="la la-at"></i> <span>Email</span></a>
 							</li>
 							<li> 
-								<a href="/chat"><i class="la la-comments"></i> <span>Chat</span> <span class="badge bg-primary pull-right">5</span></a>
+								<a th:href="@{/chat}"><i class="la la-comments"></i> <span>Chat</span> <span class="badge bg-primary pull-right">5</span></a>
 							</li>
 							<li> 
-								<a href="/assets"><i class="la la-object-ungroup"></i> <span>Assets</span></a>
+								<a th:href="@{/assets}"><i class="la la-object-ungroup"></i> <span>Assets</span></a>
 							</li>
 							<li> 
-								<a href="/activities"><i class="la la-bell"></i> <span>Activities</span></a>
+								<a th:href="@{/activities}"><i class="la la-bell"></i> <span>Activities</span></a>
 							</li>
 							<li> 
-								<a href="/users"><i class="la la-user-plus"></i> <span>Users</span></a>
+								<a th:href="@{/users}"><i class="la la-user-plus"></i> <span>Users</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-pie-chart"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="/expense-reports"> Expense Report </a></li>
-									<li><a href="/invoice-reports"> Invoice Report </a></li>
+									<li><a th:href="@{/expense-reports}"> Expense Report </a></li>
+									<li><a th:href="@{/invoice-reports}"> Invoice Report </a></li>
 								</ul>
 							</li>
 							<li> 
-								<a href="/settings"><i class="la la-cog"></i> <span>Settings</span></a>
+								<a th:href="@{/settings}"><i class="la la-cog"></i> <span>Settings</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="/login"> Login </a></li>
-									<li><a href="/register"> Register </a></li>
-									<li><a href="/forgot-password"> Forgot Password </a></li>
-									<li><a href="/profile"> Profile </a></li>
+									<li><a th:href="@{/login}"> Login </a></li>
+									<li><a th:href="@{/register}"> Register </a></li>
+									<li><a th:href="@{/forgot-password}"> Forgot Password </a></li>
+									<li><a th:href="@{/profile}"> Profile </a></li>
 								</ul>
 							</li>
 							<li class="submenu">
-								<a href="javascript:void(0);"><i class="la la-share-alt"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
+								<a href="/javascript:void(0);"><i class="la la-share-alt"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li class="submenu">
-										<a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
+										<a href="/javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
 										<ul style="display: none;">
-											<li><a href="javascript:void(0);"><span>Level 2</span></a></li>
+											<li><a href="/javascript:void(0);"><span>Level 2</span></a></li>
 											<li class="submenu">
-												<a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
+												<a href="/javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
 												<ul style="display: none;">
-													<li><a href="javascript:void(0);">Level 3</a></li>
-													<li><a href="javascript:void(0);">Level 3</a></li>
+													<li><a href="/javascript:void(0);">Level 3</a></li>
+													<li><a href="/javascript:void(0);">Level 3</a></li>
 												</ul>
 											</li>
-											<li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
+											<li><a href="/javascript:void(0);"> <span>Level 2</span></a></li>
 										</ul>
 									</li>
 									<li>
-										<a href="javascript:void(0);"> <span>Level 1</span></a>
+										<a href="/javascript:void(0);"> <span>Level 1</span></a>
 									</li>
 								</ul>
 							</li>
@@ -464,7 +464,7 @@
 						<div class="drop-scroll msg-list-scroll">
 							<ul class="list-box">
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">R</span>
@@ -479,7 +479,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item new-message">
 											<div class="list-left">
 												<span class="avatar">J</span>
@@ -494,7 +494,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">T</span>
@@ -509,7 +509,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">M</span>
@@ -524,7 +524,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">C</span>
@@ -539,7 +539,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">D</span>
@@ -554,7 +554,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">B</span>
@@ -569,7 +569,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">R</span>
@@ -584,7 +584,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">C</span>
@@ -599,7 +599,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">M</span>
@@ -614,7 +614,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">J</span>
@@ -629,7 +629,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">L</span>
@@ -644,7 +644,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/chat">
+									<a th:href="@{/chat}">
 										<div class="list-item">
 											<div class="list-left">
 												<span class="avatar">T</span>
@@ -661,17 +661,17 @@
 							</ul>
 						</div>
 						<div class="topnav-dropdown-footer">
-							<a href="/chat">See all messages</a>
+							<a th:href="@{/chat}">See all messages</a>
 						</div>
 					</div>
 				</div>
             </div>
         </div>
 		<div class="sidebar-overlay" data-reff="#sidebar"></div>
-        <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
-		<script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
+        <script type="text/javascript" th:src="@{/assets/js/bootstrap.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/app.js}"></script>
     </body>
 
 <!-- Mirrored from dreamguys.co.in/smarthr/light/invoice-view.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Dec 2018 13:09:38 GMT -->

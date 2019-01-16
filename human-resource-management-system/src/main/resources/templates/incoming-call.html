@@ -6,13 +6,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/assets/img/favicon.png}">
     <title>Incoming Call - Human Resource Management System (HRMS) admin template</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}">
     <!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
@@ -30,7 +30,7 @@
 			<div class="page-title-box pull-left">
 				<h3>Human Resource Management System (HRMS)</h3>
 			</div>
-			<a id="mobile_btn" class="mobile_btn pull-left" href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
+			<a id="mobile_btn" class="mobile_btn pull-left" th:href="@{#sidebar}"><i class="fa fa-bars" aria-hidden="true"></i></a>
 			<ul class="nav navbar-nav navbar-right user-menu pull-right">
 				<li class="dropdown hidden-xs">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o"></i> <span class="badge bg-purple pull-right">3</span></a>
@@ -41,7 +41,7 @@
 						<div class="drop-scroll">
 							<ul class="media-list">
 								<li class="media notification-message">
-									<a href="/activities">
+									<a th:href="@{/activities}">
 										<div class="media-left">
 											<span class="avatar">
 												<img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
@@ -54,7 +54,7 @@
 									</a>
 								</li>
 								<li class="media notification-message">
-									<a href="/activities">
+									<a th:href="@{/activities}">
 										<div class="media-left">
 											<span class="avatar">V</span>
 										</div>
@@ -65,7 +65,7 @@
 									</a>
 								</li>
 								<li class="media notification-message">
-									<a href="/activities">
+									<a th:href="@{/activities}">
 										<div class="media-left">
 											<span class="avatar">L</span>
 										</div>
@@ -76,7 +76,7 @@
 									</a>
 								</li>
 								<li class="media notification-message">
-									<a href="/activities">
+									<a th:href="@{/activities}">
 										<div class="media-left">
 											<span class="avatar">G</span>
 										</div>
@@ -87,7 +87,7 @@
 									</a>
 								</li>
 								<li class="media notification-message">
-									<a href="/activities">
+									<a th:href="@{/activities}">
 										<div class="media-left">
 											<span class="avatar">V</span>
 										</div>
@@ -100,35 +100,35 @@
 							</ul>
 						</div>
 						<div class="topnav-dropdown-footer">
-							<a href="/activities">View all Notifications</a>
+							<a th:href="@{/activities}">View all Notifications</a>
 						</div>
 					</div>
 				</li>
 				<li class="dropdown hidden-xs">
-					<a href="javascript:;" id="open_msg_box" class="hasnotifications"><i class="fa fa-comment-o"></i> <span class="badge bg-purple pull-right">8</span></a>
+					<a th:href="@{/javascript:;}" id="open_msg_box" class="hasnotifications"><i class="fa fa-comment-o"></i> <span class="badge bg-purple pull-right">8</span></a>
 				</li>	
 				<li class="dropdown">
-					<a href="/profile" class="dropdown-toggle user-link" data-toggle="dropdown" title="Admin">
+					<a th:href="@{/profile}" class="dropdown-toggle user-link" data-toggle="dropdown" title="Admin">
 						<span class="user-img"><img class="img-circle" src="assets/img/user.jpg" width="40" alt="Admin">
 						<span class="status online"></span></span>
 						<span>Admin</span>
 						<i class="caret"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/profile">My Profile</a></li>
-						<li><a href="/edit-profile">Edit Profile</a></li>
-						<li><a href="/settings">Settings</a></li>
-						<li><a href="/login">Logout</a></li>
+						<li><a th:href="@{/profile}">My Profile</a></li>
+						<li><a th:href="@{/edit-profile}">Edit Profile</a></li>
+						<li><a th:href="@{/settings}">Settings</a></li>
+						<li><a th:href="@{/login}">Logout</a></li>
 					</ul>
 				</li>
 			</ul>
 			<div class="dropdown mobile-user-menu pull-right">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 				<ul class="dropdown-menu pull-right">
-					<li><a href="/profile">My Profile</a></li>
-					<li><a href="/edit-profile">Edit Profile</a></li>
-					<li><a href="/settings">Settings</a></li>
-					<li><a href="/login">Logout</a></li>
+					<li><a th:href="@{/profile}">My Profile</a></li>
+					<li><a th:href="@{/edit-profile}">Edit Profile</a></li>
+					<li><a th:href="@{/settings}">Settings</a></li>
+					<li><a th:href="@{/login}">Logout</a></li>
 				</ul>
 			</div>
 		</div>
@@ -137,33 +137,33 @@
 				<div class="sidebar-menu">
 					<ul>
 						<li> 
-							<a href="/"><i class="la la-home"></i> <span>Back to Home</span></a>
+							<a th:href="@{/}"><i class="la la-home"></i> <span>Back to Home</span></a>
 						</li>
 						<li class="menu-title">Chat Groups <a href="#" data-toggle="modal" data-target="#add_group"><i class="fa fa-plus"></i></a></li>
 						<li> 
-							<a href="/chat">#General</a>
+							<a th:href="@{/chat}">#General</a>
 						</li>
 						<li> 
-							<a href="/chat">#Video Responsive Survey</a>
+							<a th:href="@{/chat}">#Video Responsive Survey</a>
 						</li>
 						<li> 
-							<a href="/chat">#500rs</a>
+							<a th:href="@{/chat}">#500rs</a>
 						</li>
 						<li> 
-							<a href="/chat">#warehouse</a>
+							<a th:href="@{/chat}">#warehouse</a>
 						</li>
 						<li class="menu-title">Direct Chats <a href="#" data-toggle="modal" data-target="#add_chat_user"><i class="fa fa-plus"></i></a></li>
 						<li> 
-							<a href="/chat"><span class="status online"></span> John Doe <span class="badge bg-danger pull-right">1</span></a>
+							<a th:href="@{/chat}"><span class="status online"></span> John Doe <span class="badge bg-danger pull-right">1</span></a>
 						</li>
 						<li> 
-							<a href="/chat"><span class="status offline"></span> Richard Miles <span class="badge bg-danger pull-right">18</span></a>
+							<a th:href="@{/chat}"><span class="status offline"></span> Richard Miles <span class="badge bg-danger pull-right">18</span></a>
 						</li>
 						<li> 
-							<a href="/chat"><span class="status away"></span> John Smith</a>
+							<a th:href="@{/chat}"><span class="status away"></span> John Smith</a>
 						</li>
 						<li class="active"> 
-							<a href="/chat"><span class="status online"></span> Mike Litorus <span class="badge bg-danger pull-right">108</span></a>
+							<a th:href="@{/chat}"><span class="status online"></span> Mike Litorus <span class="badge bg-danger pull-right">108</span></a>
 						</li>
 					</ul>
 				</div>
@@ -178,10 +178,10 @@
                                 <div class="navbar">
                                     <div class="user-details">
                                         <div class="pull-left user-img m-r-10">
-                                            <a href="/profile" title="Mike Litorus"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status online"></span></a>
+                                            <a th:href="@{/profile}" title="Mike Litorus"><img src="assets/img/user.jpg" alt="" class="w-40 img-circle"><span class="status online"></span></a>
                                         </div>
                                         <div class="user-info pull-left">
-                                            <a href="/profile" title="Mike Litorus"><span class="font-bold">Mike Litorus</span></a>
+                                            <a th:href="@{/profile}" title="Mike Litorus"><span class="font-bold">Mike Litorus</span></a>
                                             <span class="last-seen">Online</span>
                                         </div>
                                     </div>
@@ -250,7 +250,7 @@
                                         </li>
                                     </ul>
                                     <div class="end-call">
-                                        <a href="javascript:;">End Call</a>
+                                        <a th:href="@{/javascript:;}">End Call</a>
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +272,7 @@
                                             <div class="chats">
                                                 <div class="chat chat-left">
                                                     <div class="chat-avatar">
-                                                        <a href="/profile" class="avatar">
+                                                        <a th:href="@{/profile}" class="avatar">
                                                             <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
                                                         </a>
                                                     </div>
@@ -294,7 +294,7 @@
                                                 </div>
                                                 <div class="chat chat-left">
                                                     <div class="chat-avatar">
-                                                        <a href="/profile" class="avatar">
+                                                        <a th:href="@{/profile}" class="avatar">
                                                             <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
                                                         </a>
                                                     </div>
@@ -318,7 +318,7 @@
                                                 </div>
                                                 <div class="chat chat-left">
                                                     <div class="chat-avatar">
-                                                        <a href="/profile" class="avatar">
+                                                        <a th:href="@{/profile}" class="avatar">
                                                             <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
                                                         </a>
                                                     </div>
@@ -340,7 +340,7 @@
                                                 </div>
                                                 <div class="chat chat-left">
                                                     <div class="chat-avatar">
-                                                        <a href="/profile" class="avatar">
+                                                        <a th:href="@{/profile}" class="avatar">
                                                             <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
                                                         </a>
                                                     </div>
@@ -373,7 +373,7 @@
                                                         <div class="chats">
                                                             <div class="chat chat-left">
                                                                 <div class="chat-avatar">
-                                                                    <a href="/profile" class="avatar">
+                                                                    <a th:href="@{/profile}" class="avatar">
                                                                         <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
                                                                     </a>
                                                                 </div>
@@ -389,7 +389,7 @@
                                                             </div>
                                                             <div class="chat chat-left">
                                                                 <div class="chat-avatar">
-                                                                    <a href="/profile" class="avatar">
+                                                                    <a th:href="@{/profile}" class="avatar">
                                                                         <img alt="John Doe" src="assets/img/user.jpg" class="img-responsive img-circle">
                                                                     </a>
                                                                 </div>
@@ -411,7 +411,7 @@
                                                             </div>
                                                             <div class="chat chat-left">
                                                                 <div class="chat-avatar">
-                                                                    <a href="/profile" class="avatar">
+                                                                    <a th:href="@{/profile}" class="avatar">
                                                                         <img alt="Jeffery Lalor" src="assets/img/user.jpg" class="img-responsive img-circle">
                                                                     </a>
                                                                 </div>
@@ -428,7 +428,7 @@
                                                             </div>
                                                             <div class="chat chat-left">
                                                                 <div class="chat-avatar">
-                                                                    <a href="/profile" class="avatar">
+                                                                    <a th:href="@{/profile}" class="avatar">
                                                                         <img alt="Jeffery Lalor" src="assets/img/user.jpg" class="img-responsive img-circle">
                                                                     </a>
                                                                 </div>
@@ -480,7 +480,7 @@
                                                         </div>
                                                         <h3 class="user-name m-t-10 m-b-0">John Doe</h3>
                                                         <small class="text-muted">Web Designer</small>
-                                                        <a href="/edit-profile" class="btn btn-primary edit-btn"><i class="fa fa-pencil"></i></a>
+                                                        <a th:href="@{/edit-profile}" class="btn btn-primary edit-btn"><i class="fa fa-pencil"></i></a>
                                                     </div>
                                                     <div class="chat-profile-info">
                                                         <ul class="user-det-list">
@@ -766,13 +766,13 @@
                 <div class="modal-body">
                     <div class="profile-widget">
                         <div class="profile-img">
-                            <a href="/client-profile" class="avatar"><img src="assets/img/user-03.jpg" alt=""></a>
+                            <a th:href="@{/client-profile}" class="avatar"><img src="assets/img/user-03.jpg" alt=""></a>
                         </div>
-                        <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="/client-profile">Tressa Wexler</a></h4>
+                        <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a th:href="@{/client-profile}">Tressa Wexler</a></h4>
                         <div class="small text-muted">calling ...</div>
                         <div class="incoming-btns">
-                            <a href="/chat" class="btn btn-success m-r-10">Decline</a>
-                            <a href="/client-profile" class="btn btn-danger">Answer</a>
+                            <a th:href="@{/chat}" class="btn btn-success m-r-10">Decline</a>
+                            <a th:href="@{/client-profile}" class="btn btn-danger">Answer</a>
                         </div>
                     </div>
                 </div>
@@ -780,10 +780,10 @@
         </div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/app.js}"></script>
 </body>
 
 

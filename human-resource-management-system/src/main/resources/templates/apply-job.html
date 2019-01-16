@@ -5,15 +5,15 @@
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{/assets/img/favicon.png}">
         <title>Apply Job - Human Resource Management System (HRMS) admin template</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/assets/css/font-awesome.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/dataTables.bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/select2.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap-datetimepicker.min.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}">
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
@@ -32,19 +32,19 @@
                 </div>
 				<ul class="nav navbar-nav navbar-right user-menu pull-right">
 					<li>
-						<a href="/login">Login</a>
+						<a th:href="@{/login}">Login</a>
 					</li>
 					<li>
-						<a href="/register">Register</a>
+						<a th:href="@{/register}">Register</a>
 					</li>
 				</ul>
 				<div class="dropdown mobile-user-menu pull-right">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="/profile">My Profile</a></li>
-						<li><a href="/edit-profile">Edit Profile</a></li>
-						<li><a href="/settings">Settings</a></li>
-						<li><a href="/login">Logout</a></li>
+						<li><a th:href="@{/profile}">My Profile</a></li>
+						<li><a th:href="@{/edit-profile}">Edit Profile</a></li>
+						<li><a th:href="@{/settings}">Settings</a></li>
+						<li><a th:href="@{/login}">Logout</a></li>
 					</ul>
 				</div>
             </div>
@@ -85,15 +85,15 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="assets/js/dataTables.bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
-		<script type="text/javascript" src="assets/js/select2.min.js"></script>
-		<script type="text/javascript" src="assets/js/moment.min.js"></script>
-		<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
-		<script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" th:src="@{/assets/js/jquery-3.2.1.min.js}"></script>
+        <script type="text/javascript" th:src="@{/assets/js/bootstrap.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/jquery.dataTables.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/dataTables.bootstrap.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/select2.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/moment.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/bootstrap-datetimepicker.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/app.js}"></script>
     </body>
 
 <!-- Mirrored from dreamguys.co.in/smarthr/light/apply-job.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Dec 2018 13:09:42 GMT -->
