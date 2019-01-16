@@ -573,7 +573,7 @@
 							<h4 class="modal-title">Add Holiday</h4>
 						</div>
 						<div class="modal-body">
-							<form action="/holidays/addNewHoliday" method="get">
+							<form th:action="@{/holidays/addNewHoliday}" method="get">
 								<div class="form-group">
 									<label>Holiday Name <span class="text-danger">*</span></label>
 									<input class="form-control" required="required" type="text" name="title">
